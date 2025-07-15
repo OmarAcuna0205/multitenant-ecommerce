@@ -48,16 +48,6 @@ export const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <nav className="h-20 flex border-b justify-between font-medium bg-white">
-      <div className="flex lg:hidden items-center justify-center">
-        <Button
-          variant="ghost"
-          className="size-12 border-transparent bg-white"
-          onClick={() => setIsSidebarOpen(true)}
-        >
-          <MenuIcon />
-        </Button>
-      </div>
-
       <Link href="/" className="pl-6 flex items-center">
         <span className={cn("text-5xl font-semibold", poppins.className)}>
           Swapi
@@ -96,6 +86,16 @@ export const Navbar = () => {
           className="border-l border-t-0 border-r-0 px-12 h-full rounded-none bg-black text-white hover:bg-pink-400  hover:text-black transition-colors text-lg"
         >
           <Link href="/sign-up">Sign up</Link>
+        </Button>
+      </div>
+
+      <div className="flex lg:hidden items-center justify-center pr-4">
+        <Button
+          variant="ghost"
+          className="size-12 border-transparent bg-white"
+          onClick={() => setIsSidebarOpen(true)}
+        >
+          <MenuIcon />
         </Button>
       </div>
     </nav>
